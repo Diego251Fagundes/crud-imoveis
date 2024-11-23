@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="styles/images/logo.jpg" type="styles/images/logo.jpg">
+    <title>B&D REAL ESTATE</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="scripts/script_addimovel.js"></script>
+    <script src="scripts/alert.js" defer></script>
+</head>
+
+<div class="navbar">
+    <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="createimovel.html" class="highlight">Cadastrar Imóvel</a></li>
+        <li><a href="catalog.html">Consultar Todos Imóveis</a></li>
+    </ul>
+    <a>Bruno Shiraishi / Diego Alves</a>
+    <div class="contact-info">
+        <p></p>
+    </div>
+</div>
+
+<div class="header">
+    <form id="formadd" onsubmit="event.preventDefault(); addImov()">
+        <div>
+            <label for="id">ID do Imóvel:</label>
+            <input type="text" id="id" name="id" placeholder="ID do imóvel">
+        </div>
+        <div>
+            <label for="tipo">Tipo do Imóvel:</label>
+            <input type="text" id="tipo" name="tipo" placeholder="Casa ou Apartamento">
+        </div>
+        <div>
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" placeholder="Endereço do imóvel">
+        </div>
+        <div>
+            <label for="tamanho">Tamanho (m²):</label>
+            <input type="text" id="tamanho" name="tamanho" placeholder="Tamanho do imóvel">
+        </div>
+        <div>
+            <label for="quartos">Número de Quartos:</label>
+            <input type="number" id="quartos" name="quartos" placeholder="Número de quartos">
+        </div>
+        <div>
+            <label for="banheiros">Número de Banheiros:</label>
+            <input type="number" id="banheiros" name="banheiros" placeholder="Número de banheiros">
+        </div>
+        <div>
+            <label for="valor">Valor:</label>
+            <input type="text" id="valor" name="valor" placeholder="Valor do imóvel">
+        </div>
+        <div>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" placeholder="Status (Ex: Disponível, Vendido)">
+        </div>
+        <div>
+            <label for="proprietario">Proprietário:</label>
+            <input type="text" id="proprietario" name="proprietario" placeholder="Nome do proprietário">
+        </div>
+        <div>
+            <label for="observacoes">Observações:</label>
+            <textarea id="observacoes" name="observacoes" placeholder="Observações sobre o imóvel"></textarea>
+        </div>
+        <div>
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>
+</div>
+
+<div id="custom-alert" class="hidden">
+    <div class="custom-alert-content">
+        <p id="alert-message">Mensagem personalizada aqui</p>
+        <button id="alert-ok-button">OK</button>
+    </div>
+</div>
+
+</body>
+</html>

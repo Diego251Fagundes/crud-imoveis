@@ -1,0 +1,38 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="styles/images/logo.jpg" type="styles/images/logo.jpg">
+    <title>B&D REAL ESTATE</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <li><a href="index.html" class="highlight">Início</a></li>
+        <li><a href="createimovel.html" class="nav-button">Cadastrar Imóvel</a></li>
+        <li><a href="catalog.html" class="nav-button">Consultar Todos Imóveis</a></li>
+    </ul>
+    <a>Bruno Shiraishi / Diego Alves</a>
+</div>
+
+<div class="header">
+    <div class="search-bar">
+        <input type="text" name="id" id="id" placeholder="Consultar imóvel por ID">
+        <button class="search-button" onclick="redirectToConsultarImovel()">Pesquisar</button>
+    </div>
+</div>
+
+<script>
+    function redirectToConsultarImovel() {
+        const id = document.getElementById('id').value;
+        if (id) {
+            window.location.href = `consultar_imovel.html?id=${id}`;
+        } else {
+            alert("Por favor, insira um ID válido.");
+        }
+    }
+</script>
+</body>
+</html>

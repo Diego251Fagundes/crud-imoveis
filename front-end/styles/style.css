@@ -1,0 +1,394 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('images/mansao1.jpeg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+
+.remove-bg {
+    background-image: none;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1f1f1f;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar .highlight {
+    background-color: #d4af37;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover, .nav-button:hover {
+    background-color: #d4af37;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    padding-top: 210px;
+}
+
+.header h2 {
+    margin-top: 80px;
+    color: #000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+form label {
+    font-size: 1rem;
+    color: #d4af37;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #333232;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #d4af37;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
+.contact-info {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 10px;
+    font-size: 1rem;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.search-bar .search-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #d4af37;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #1f1f1f;
+    font-weight: bold;
+}
+
+.search-bar .search-button:hover {
+    background-color: #c89f2d;
+}
+
+/* Container para o catálogo de imóveis */
+.catalog-container {
+    padding: 100px 20px 20px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Estilos para os cards */
+.card {
+    width: 220px;
+    height: 320px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o card ao passar o mouse */
+}
+
+.card h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 14px;
+    color: #fff;
+    margin: 5px 0;
+}
+
+/* Contêiner para os ícones de editar e excluir */
+.icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+/* Ícone de editar */
+.edit-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.edit-icon:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Ícone de lixeira */
+.delete-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.delete-icon:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Ajuste do catálogo para a consulta por ID */
+#single-imovel {
+    padding: 30px 50px 50px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Adicionando margem para elevar o card */
+#single-imovel .card {
+    margin-top: -30px;
+}
+
+
+/* Ajustes específicos para o formulário de edição */
+form input[readonly] {
+    background-color: #444; /
+    cursor: not-allowed;
+    color: #fff;
+}
+
+/* Personalização do botão de edição */
+form button {
+    background-color: #d4af37;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #1f1f1f;
+}
+
+form button:hover {
+    background-color: #c89f2d;
+}
+
+/* Estilos para o alerta personalizado */
+#custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#custom-alert.hidden {
+    display: none;
+}
+
+.custom-alert-content {
+    background-color: #1f1f1f;
+    color: #d4af37;
+    padding: 36px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-alert-content p {
+    margin-bottom: 20px;
+}
+
+#alert-ok-button {
+    background-color: #d4af37;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#alert-ok-button:hover {
+    background-color: #d4af37;
+}
+
+/* Modal personalizada de confirmação */
+#custom-confirm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#custom-confirm.hidden {
+    display: none;
+}
+
+.custom-confirm-content {
+    background-color: #1f1f1f;
+    color: #d4af37;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+#custom-confirm button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#confirm-yes-button {
+    background-color: #d4af37;
+    color: #1f1f1f;
+}
+
+#confirm-yes-button:hover {
+    background-color: #c89f2d;
+}
+
+#confirm-no-button {
+    background-color: #444;
+    color: #fff;
+}
+
+#confirm-no-button:hover {
+    background-color: #666;
+}
+
+.custom-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #d4af37;
+    color: #1f1f1f;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 14px;
+    text-align: center;
+}
