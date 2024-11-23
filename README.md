@@ -1,6 +1,6 @@
 # **CRUD de Imóveis**
 
-Um sistema web para gerenciamento de imóveis, desenvolvido em dupla como parte de um trabalho acadêmico com finalidade de avaliação para nota semestral. O projeto permite realizar operações CRUD (Criar, Deletar, Atualizar, Consultar por ID e Consultar todos) sobre imóveis, utilizando **Java** com Spring Boot no backend; e **HTML, CSS e JavaScript** no frontend.
+Um sistema web para gerenciamento de imóveis, desenvolvido em dupla como parte de um trabalho acadêmico com finalidade de avaliação para nota semestral. O projeto permite realizar operações CRUD (Criar, Deletar, Atualizar, Consultar por ID e Consultar todos) sobre imóveis, utilizando **Java** com Spring Boot no backend; e **HTML, CSS e JavaScript** no frontend além do Banco de Dados MySQL.
 
 ---
 
@@ -44,7 +44,7 @@ git clone https://github.com/Diego251Fagundes/crud-imoveis.git
    ```sql
    CREATE DATABASE imoveis;
    ```
-2. Importe o código SQL que está disponível no repositório para criar a tabela necessária. O arquivo SQL pode ser encontrado no arquivo `banco de dados.txt`.
+2. Importe o código SQL que está disponível no repositório para criar a tabela necessária. O arquivo SQL pode ser encontrado no arquivo `MySQL/imoveis.sql`.
 
 
 ### **Passo 3: Configure o Backend**
@@ -63,7 +63,7 @@ git clone https://github.com/Diego251Fagundes/crud-imoveis.git
    - O servidor será iniciado e estará disponível em `http://localhost:8080`.
 
 ### **Passo 4: Configure o Frontend**
-1. Abra a pasta do frontend no seu editor de texto ou IDE.
+1. Abra a pasta do frontend no seu editor de texto ou IDE do Intellij.
 2. Utilize um servidor local para rodar o frontend:
    - Caso use o **Live Server** no Visual Studio Code:
      - Clique com o botão direito no arquivo `index.html` e selecione **"Open with Live Server"**.
@@ -96,7 +96,7 @@ crud-imoveis/
 │   │   ├── style.css       # Estilo principal da aplicação
 │   │   └── images/         # Pasta para armazenar imagens do projeto
 │   ├
-├── banco-de-dados/         # Script SQL para configurar o banco de dados
+├── MySQL/                  # Script SQL para configurar o banco de dados
 │   └── imoveis.sql         # Código SQL para criação do banco de dados
 │  
 └── README.md               # Documentação do projeto
