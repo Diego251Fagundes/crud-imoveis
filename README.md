@@ -113,12 +113,12 @@ crud-imoveis/
 
 ## **Screenshots**
 
+- **Tela Inicial:**
+<img src="Screenshots/Inicio.png">
+
 - **Tela de cadastro do imóvel:**
+<img src="Screenshots/Cadastrar.png">
 
 
-
-- **Lista de todos os imoveis:**
-
-
-
-- **Detalhes da consulta por ID:**
+- **Lista de Imoveis Cadastrados:**
+<img src="Screenshots/ConsultarTodos.png">
